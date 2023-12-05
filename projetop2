@@ -1,0 +1,40 @@
+git init
+git add main.py
+git commit -m 
+git commit -m "Adiciona arquivo main.py"
+
+# main.py
+#importando bibliotecas de terceiros, essa biblioteca serve para o controle do computador pelo codigo, para criar pastas
+from enum import Enum
+
+class Usuario:
+
+    def __init__(self, nome, senha):
+        self.__senha_emergencia = 000000
+        self._nome = nome
+        self.__senha = senha
+#codificando metodos destrutores, essa função serve para excluir uma variavel indesejada
+    def __del__(self): 
+        print("excluído com sucesso!")
+#codificando propriedades, optamos por usar um setter para facilitar a mudança do nome
+    @property
+    def nome(self):
+        print("Acessando nome")
+        return self._nome
+
+    @nome.setter
+    def nome(self, novo_nome):
+        print("Alterando o nome...")
+        self._nome = novo_nome
+
+#codificando enum, pois a senha de emergencia nao pode ser alterada
+    def senha_emergencia(Enum):
+        senha = 00000
+
+user1 = Usuario('vinicius_custodio', 123456)
+user2 = Usuario ('leonardo_jotta', 130505)
+
+#codificando testes unitarios, para testar o funcionamento do codigo
+print(user1.nome)
+user1.nome = "gabloko"
+print(user1.nome)
