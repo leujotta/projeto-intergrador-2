@@ -1,7 +1,7 @@
 git init
 git add main.py
 git commit -m 
-git commit -m "Adiciona arquivo main.py"
+git tag -a v1.0 -m "Versão 1.0"
 
 # main.py
 #importando bibliotecas de terceiros, essa biblioteca serve para o controle do computador pelo codigo, para criar pastas
